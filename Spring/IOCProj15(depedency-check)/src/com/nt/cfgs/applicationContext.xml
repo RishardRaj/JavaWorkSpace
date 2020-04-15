@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+ 	<bean id="addrs"  class="com.nt.beans.AddressInfo">
+ 	   <property name="street" value="cdac street"/>
+ 	   <property name="area"  value="ameerpet"/>
+ 	   <property name="city"  value="hyd"/>
+ 	</bean>
+ 	<bean id="student"  class="com.nt.beans.StudentInfo"  dependency-check="all">
+ 	   <property name="sno" value="101"/>
+  	   <property name="sname"  value="raja"/> 
+<!--  	   <property name="addrsInfo"  ref="addrs"/> -->
+ 	</bean>
+</beans>

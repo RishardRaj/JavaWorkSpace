@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="pphc"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="src/com/nt/commons/DBDetails.properties" />
+	</bean> -->
+	
+<bean id="pphc"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" >
+		 <list>
+		 	 <value>com/nt/commons/DBDetails1.properties</value>
+		   <value>com/nt/commons/DBDetails.properties</value>
+		  </list>
+		</property>
+	</bean> 
+	
+	 <!-- Cfg DataSource Bean -->
+	<bean id="drds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.pwd}" />
+	</bean>
+	<bean id="scds"
+		class="org.springframework.jdbc.datasource.SingleConnectionDataSource"
+		parent="drds" />
+	<bean id="studentDAO" class="com.nt.dao.StudentDAOImpl">
+		<property name="ds" ref="scds" />
+	</bean>
+	<bean id="studentService" class="com.nt.service.StudentServiceImpl">
+		<property name="dao" ref="studentDAO" />
+	</bean>
+	<bean id="controller" class="com.nt.controller.StudentController">
+		<property name="service" ref="studentService" />
+	</bean>
+</beans>

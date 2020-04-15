@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- congigure Depedent bean class -->
+	<bean id="date" class="java.util.Date" />
+	
+	
+
+	<!-- Configure Taraget Bean class -->
+	<bean id="wish"  class="com.nt.beans.WishGenerator">
+		<property name="sysDate" ref="date"/>
+	</bean>
+	
+
+</beans>
+
+

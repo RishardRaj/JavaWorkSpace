@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="jofb"  class="org.springframework.jndi.JndiObjectFactoryBean">
+   <property name="jndiName" value="java:/comp/env/DsJndi"/>
+</bean>
+
+<bean id="sesfact" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+     <property name="dataSource" ref="jofb"/>
+     <property name="annotatedClasses">
+         <list>
+            <value>com.nt.bo.UserHLO</value>
+          </list>
+      </property>
+      <property name="hibernateProperties">
+            <props>
+              <prop key="show_sql">true</prop>
+              <prop key="dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+           </props>
+      </property>
+  </bean>
+ <bean id="ht"  class="org.springframework.orm.hibernate5.HibernateTemplate">
+   <property name="sessionFactory" ref="sesfact"/>
+ </bean>
+
+
+<context:component-scan base-package="com.nt.dao"/>
+ 
+</beans>

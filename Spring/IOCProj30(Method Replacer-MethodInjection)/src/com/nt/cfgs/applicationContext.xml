@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="iac"  class="com.nt.beans.IntrAmountCalculator">
+    <replaced-method name="calcIntrAmt" replacer="mr">
+       <arg-type>float</arg-type>
+       <arg-type>float</arg-type>
+       
+    </replaced-method> 
+</bean>
+<bean id="mr"  class="com.nt.beans.IntrRateReplacer">
+  <property name="rate" value="1.5f"/>
+</bean>
+</beans>

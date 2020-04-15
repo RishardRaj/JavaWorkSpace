@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ORMMVCAnno-LoginApp-SFC-Validations/WebContent/WEB-INF/web2.xml&apos; to &apos;webxml&apos;" description="Rename resource &apos;web2.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/web2.xml" name="webxml" stamp="1509445491365" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ORMMVCAnno-LoginApp-SFC-Validations/WebContent/WEB-INF/webxml&apos; to &apos;web.xml&apos;" description="Rename resource &apos;webxml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/webxml" name="web.xml" stamp="1509445504550" updateReferences="true"/>
+</session>

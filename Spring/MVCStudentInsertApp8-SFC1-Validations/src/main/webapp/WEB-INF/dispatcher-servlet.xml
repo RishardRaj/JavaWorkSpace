@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Handler Mapping -->
+<bean id="suhm"  class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+   <property name="mappings">
+    <props>
+      <prop key="student.htm">sic</prop>
+    </props>  
+   </property>
+</bean>
+ <!-- Controller class -->
+ <bean id="sic"  class="com.nt.controller.StudentInsertController">
+   <property name="commandClass" value="com.nt.command.StudentCmd"/>
+   <property name="commandName" value="stCmd"/>
+   <property name="sessionForm" value="true"/>
+   <property name="formView" value="student"/>
+   <property name="successView" value="result"/>
+   <property name="service"  ref="stService"/>
+   <property name="validator" ref="stValidator"/>
+ </bean>
+ <!-- Cfg properties file -->
+ <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basename"  value="com/nt/commons/StudentCmdValidationErrors"/>
+ </bean>
+ <!-- Validator class -->
+ <bean id="stValidator" class="com.nt.validator.StudentCmdValidator"/>
+ <!-- view Resolver -->
+ <bean id="vr"  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix"  value="/WEB-INF/pages/"/>
+    <property name="suffix"  value=".jsp"/>
+ </bean>
+
+</beans>

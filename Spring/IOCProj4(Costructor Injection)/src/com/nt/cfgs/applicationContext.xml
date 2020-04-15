@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="stDetails"  class="com.nt.beans.StudentDetails">
+ <constructor-arg  value="70.45f" type="float"/>
+   <constructor-arg  value="101" type="int"/>
+   <constructor-arg  value="raja" type="java.lang.String" />
+ </bean>
+ 
+ <bean id="mk"   class="com.nt.beans.Marks">
+ <!--   <constructor-arg  value="60"  index="2"/>
+    <constructor-arg  value="40" index="0"/>
+    <constructor-arg  value="50" index="1"/> -->
+    
+      <constructor-arg  value="60"  name="mk3"/>
+    <constructor-arg  value="40"  name="mk1"/>
+    <constructor-arg  value="50" name="mk2"/>
+    
+  
+ </bean>
+
+</beans>

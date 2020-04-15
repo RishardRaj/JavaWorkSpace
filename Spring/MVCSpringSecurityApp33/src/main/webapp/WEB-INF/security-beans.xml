@@ -1,0 +1,70 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+  <security:http use-expressions="true">
+    <security:intercept-url pattern="/home.htm" access="permitAll" />
+    <security:intercept-url pattern="/phone.htm" access="hasRole('ROLE_ADMIN')" />
+    <security:intercept-url pattern="/profile.htm" access="hasRole('ROLE_USER')" />
+    <form-login/> 
+    <logout/>               
+  </security:http>
+    <security:authentication-manager>
+
+ <security:authentication-provider>
+    <!-- <security:user-service>
+            <security:user name="raja" password="rani" authorities="ROLE_USER" />
+                <security:user name="ravi" password="ravi" authorities="ROLE_ADMIN,ROLE_USER" />
+            </security:user-service> -->
+<!--     Using Properties file as Authentication provider
+    <security:user-service properties="classpath:com/nt/commons/security.properties"/>
+ -->
+   
+   	<jdbc-user-service
+		   data-source-ref="jofb"
+		  users-by-username-query="select uname,pwd,status from users where uname=?"
+		  authorities-by-username-query="select uname,role from users_roles where uname=?" />
+ 
+   </security:authentication-provider>
+
+       
+ </security:authentication-manager>                    
+    
+  
+ </beans:beans>
+ 
+ <!-- DB tables
+   users (parent)
+     |---uname (vc2)(pk)
+     |---pwd  (vc2)
+     |---status  (n) (0/1)
+     
+    users_roles
+     |--ROLE_ID  (n)
+     |--UNAME  (vc2)(FK with uname(users)
+     |--ROLE  (vc2)
+     
+SQL> select * from users;
+
+UNAME                PWD                      STATUS
+-------------------- -------------------- ----------
+raja                 rani                          1
+ravi                 hyd                           1
+jani                 jani                          1     
+
+SQL> select * from users_roles;
+
+   ROLE_ID UNAME                ROLE
+---------- -------------------- --------------------
+         1 raja                 ROLE_USER
+         2 ravi                 ROLE_ADMIN
+         3 jani                 ROLE_ADMIN
+         4 jani                 ROLE_USER    
+    
+  -->
+ 
+ 

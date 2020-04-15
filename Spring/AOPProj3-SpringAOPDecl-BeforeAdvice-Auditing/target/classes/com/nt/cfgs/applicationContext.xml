@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- Configure Target class -->
+  <bean id="approver"   class="com.nt.beans.OrderApprover"/>
+  <!-- Configure Aspect/Advice -->
+  <bean id="auditAdvice"  class="com.nt.aspect.AuditingAdvice"/>
+  <!-- Configure ProxyFactory Bean to get PRoxy obj -->
+  <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="target"  ref="approver"/>
+      <property name="interceptorNames">
+         <list>
+            <value>auditAdvice</value>
+         </list>
+      </property> 
+  </bean>
+  
+</beans>
+
+

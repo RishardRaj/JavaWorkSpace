@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;IOCProject_Annotations(@Configurator,@Bean)&apos;" deleteContents="false" description="Delete resource &apos;IOCProject_Annotations(@Configurator,@Bean)&apos;" element1="/IOCProject_Annotations(@Configurator,@Bean)" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1493046609030"/>
+</session>

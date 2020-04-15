@@ -1,0 +1,10 @@
+D\:/Practices/ReceivedApps/Extracted/Spring_Nov2016/ntsp57/ORMMVCAnno-LoginApp-SFC-Validations/WebContent = ORMMVCAnno-LoginApp-SFC-Validations.war
+D\:/Practices/ReceivedApps/Extracted/Spring_Nov2016/ntsp57/.metadata/.plugins/org.eclipse.core.resources/ORMMVCAnno-LoginApp-SFC-Validations/build/weboutput = ORMMVCAnno-LoginApp-SFC-Validations.war
+D\:/Practices/ReceivedApps/Extracted/Spring_Nov2016/ntsp57/ORMMVCAnno-LoginApp-SFC-Validations/build/classes = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/classes
+C\:/Users/RAJ/Downloads/hibernate-validator-6.0.2.Final.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/hibernate-validator-6.0.2.Final.jar
+C\:/Users/RAJ/Downloads/validation-api-2.0.0.Final.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/validation-api-2.0.0.Final.jar
+E\:/Received/Nataraj/Disk-I/Frameworks/Spring/spring-framework-3.0.5.RELEASE-with-docs/spring-framework-3.0.5.RELEASE/dist/org.springframework.web.servlet-3.0.5.RELEASE.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar
+E\:/Received/Nataraj/Disk-I/Frameworks/Spring/SPRING\ 4.0.4/spring-dao-2.0.8.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/spring-dao-2.0.8.jar
+E\:/Received/Nataraj/Disk-I/Frameworks/Spring/SPRING\ 4.0.4/spring-core-4.1.4.RELEASE.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/spring-core-4.1.4.RELEASE.jar
+D\:/Installations/Servers/Tomcat/Tomcat_9.0/webapps/examples/WEB-INF/lib/jstl.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/jstl.jar
+E\:/Received/Nataraj/Disk-I/Frameworks/Spring/commons-logging.jar = ORMMVCAnno-LoginApp-SFC-Validations.war/WEB-INF/lib/commons-logging.jar

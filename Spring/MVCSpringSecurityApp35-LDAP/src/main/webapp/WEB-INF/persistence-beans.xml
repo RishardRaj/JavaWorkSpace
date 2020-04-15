@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+  <bean id="jofb"   class="org.springframework.jndi.JndiObjectFactoryBean">
+     <property name="JndiName"  value="java:/comp/env/DsJndi"/>
+  </bean>
+  
+ </beans>

@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="basePulsor"   abstract="true">
+   <property name="type" value="sports"/>
+   <property name="engineCC" value="220CC"/>
+   <property name="color" value="red"/>
+</bean>
+<bean id="pulsor1"  class="com.nt.beans.Bike" parent="basePulsor">
+   <property name="bikeId" value="TS09EC9999"/>
+</bean>
+
+<bean id="pulsor2"  class="com.nt.beans.Bike" parent="basePulsor">
+   <property name="bikeId" value="TS09EC8888"/>
+</bean>
+<bean id="pulsor3"  class="com.nt.beans.Bike" parent="basePulsor">
+   <property name="bikeId" value="TS09EC7777"/>
+</bean>
+
+</beans>

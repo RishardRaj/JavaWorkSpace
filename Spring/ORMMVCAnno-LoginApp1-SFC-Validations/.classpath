@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SpringORM_Dependencies"/>
+	<classpathentry kind="lib" path="C:/Users/RAJ/Downloads/validation-api-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="E:/Received/Nataraj/Disk-I/Frameworks/Spring/spring-framework-3.0.5.RELEASE-with-docs/spring-framework-3.0.5.RELEASE/dist/org.springframework.web.servlet-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Received/Nataraj/Disk-I/Frameworks/Spring/spring-framework-3.0.5.RELEASE-with-docs/spring-framework-3.0.5.RELEASE/dist/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Received/Nataraj/Disk-I/Frameworks/Spring/spring-framework-3.0.5.RELEASE-with-docs/spring-framework-3.0.5.RELEASE/dist/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJ/Downloads/hibernate-validator-6.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJ/Downloads/spring-context-support-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

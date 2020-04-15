@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="tb"  class="com.nt.beans.TestBean"  init-method="myInit" destroy-method="myDestroy">
+   <constructor-arg value="hello"/>
+   <property name="msg"  value="hell"/>
+ </bean>
+ 
+  <bean class="com.nt.bpp.CommonBPP"/>
+</beans>

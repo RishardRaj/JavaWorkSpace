@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- Configure Target class -->
+  <bean id="math"   class="com.nt.target.Math"/>
+  <!-- Configure Aspect/Advice -->
+  <bean id="pmAdvice"  class="com.nt.aspect.PerformanceMonitoringAdvice"/>
+  <bean id="logAdvice"   class="com.nt.aspect.LogAroundAdvice"/>
+  <bean id="cacheAdvice"  class="com.nt.aspect.CacheAdvice"/>
+  <!-- pointcut cfg -->
+   <bean id="pmPointcut"  class="com.nt.pointcut.PMAdviceStaticPointcut"/> 
+<!--   <bean id="pmPointcut"  class="org.springframework.aop.support.NameMatchMethodPointcut">
+     <property name="mappedNames">
+       <list>
+         <value>add</value>
+         <value>mul</value>
+       </list>
+     </property>
+  </bean> -->
+  
+  <bean id="pmAdvisor"  class="org.springframework.aop.support.DefaultPointcutAdvisor">
+         <property name="advice"  ref="pmAdvice"/>
+         <property name="pointcut"  ref="pmPointcut"/>
+  </bean>
+ 
+ <!-- <bean id="pmAdvisor"  class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+      <property name="mappedNames">
+       <list>
+         <value>add</value>
+         <value>mul</value>
+       </list>
+      </property>
+      <property name="advice"  ref="pmAdvice"/>
+ 
+ </bean> -->
+ 
+<!--  <bean id="pmAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+    <property name="pattern"  value=".*a*sh"/>
+    <property name="advice"  ref="pmAdvice"/>
+ 
+ </bean> -->
+ 
+ <bean id="dynaCachePointcut"   class="com.nt.pointcut.CacheAdviceDynamicPointcut"/>
+ 
+ <bean id="cacheAdvisor"  class="org.springframework.aop.support.DefaultPointcutAdvisor">
+         <property name="advice"  ref="cacheAdvice"/>
+         <property name="pointcut"  ref="dynaCachePointcut"/>
+  </bean>
+  
+  <!-- Configure ProxyFactory Bean to get PRoxy obj -->
+  <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="target"  ref="math"/>
+      <property name="interceptorNames">
+         <list>
+            <value>cacheAdvisor</value>
+           <value>pmAdvisor</value>
+           <value>logAdvice</value>
+         </list>
+      </property> 
+  </bean>
+  
+</beans>
+
+

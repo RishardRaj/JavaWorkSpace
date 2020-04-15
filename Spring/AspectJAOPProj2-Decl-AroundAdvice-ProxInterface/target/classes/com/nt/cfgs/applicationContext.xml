@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+  <!--  cfg Aspect class as spring bean -->
+	<bean id="pmAspect" class="com.nt.aspect.PerformanceMonitoringAspect" />
+	<bean id="cacheAspect"  class="com.nt.aspect.CacheAspect"/>
+	<bean id="logAspect"  class="com.nt.aspect.LogAroundAspect"/>
+	
+   <!-- cfg target class -->
+	<bean id="iac" class="com.nt.target.IntrAmtCalculator" />
+	
+ 	<aop:config>
+	 <!-- prepre static pointcut -->
+		<aop:pointcut id="ptcPmAdvice"
+			expression="execution(* com.nt.target.IntrAmtCalculatorInterface.*(..))" />
+		<aop:pointcut id="ptcCacheAdvice"
+			expression="execution(* com.nt.target.IntrAmtCalculatorInterface.calcCompoundIntrAmt(..))" />
+		<aop:pointcut id="ptcLogAdvice"
+			expression="execution(* com.nt.target.IntrAmtCalculatorInterface.*(..))" />
+			
+		
+	 <!-- make spring as Aspectj AOP Advice -->
+	 <aop:aspect  ref="pmAspect" order="3">
+		 <!-- make mehtod as around advice-->
+		 	<aop:around method="monitor" pointcut-ref="ptcPmAdvice" />
+		</aop:aspect>
+		
+	 	<aop:aspect ref="cacheAspect" order="1">
+		   <aop:around  method="caching"  pointcut-ref='ptcCacheAdvice'/>
+		</aop:aspect>
+		
+		<aop:aspect ref="logAspect" order="2">
+		   <aop:around  method="log"  pointcut-ref='ptcLogAdvice'/>
+		</aop:aspect>
+		
+		
+		
+	
+	</aop:config> 
+</beans>  

@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Depedent bean class cfg -->
+ <bean id="dtdc"   class="com.nt.beans.DTDC"  scope="prototype"/>
+ <bean id="blueDart"   class="com.nt.beans.BlueDart" scope="prototype"/>
+ <bean id="dhl"   class="com.nt.beans.DHL" scope="prototype"/>
+ 
+ 
+<!-- Cfg Target  bean class -->
+<bean id="flipKart"  class="com.nt.beans.FlipKart">
+     <property name="courier"  ref="dtdc"/>
+</bean>
+
+</beans>

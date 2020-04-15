@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+  <!--  cfg Aspect class as spring bean -->
+	<bean id="cuponAspect" class="com.nt.aspect.DiscountCuponGeneratorAspect" />
+	
+   <!-- cfg target class -->
+	<bean id="shopping" class="com.nt.target.ShoppingStore" />
+	
+ 	<aop:config>
+	  <!-- prepre static pointcut -->
+	  	<aop:pointcut id="ptcCuponAdvice"
+			expression="execution(* com.nt.target.ShoppingStore.*(..))" /> 
+			
+	 <!-- make spring as Aspectj AOP Advice -->
+	 <aop:aspect  ref="cuponAspect">
+		 <!-- make mehtod as after advice-->
+		 	<aop:after-returning  method="generateCupon" pointcut-ref="ptcCuponAdvice"  returning="billAmt" /> 
+		</aop:aspect>
+	</aop:config> 
+</beans>  

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+  <!--  cfg Aspect class as spring bean -->
+	<bean id="exceptionLoggerAspect" class="com.nt.aspect.CommonExceptionLogger" />
+	
+   <!-- cfg target class -->
+	<bean id="arithmetic" class="com.nt.target.ArithmeticService" />
+	
+ 	<aop:config>
+	  <!-- prepre static pointcut -->
+	  	<aop:pointcut id="ptcExceptionLoggerAdvice"
+			expression="execution(* com.nt.target.ArithmeticService.*(..))" /> 
+			
+	 <!-- make spring as Aspectj AOP Advice -->
+	 <aop:aspect  ref="exceptionLoggerAspect">
+		 <!-- make mehtod as after advice-->
+		 	<aop:after-throwing  method="exceptionLogger" pointcut-ref="ptcExceptionLoggerAdvice"  throwing="ex" /> 
+		</aop:aspect>
+	</aop:config> 
+</beans>  

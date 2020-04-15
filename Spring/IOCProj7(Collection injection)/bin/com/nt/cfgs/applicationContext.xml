@@ -1,0 +1,82 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="asian"  class="com.nt.beans.AsianPaints">
+   <property name="colors">
+      <list>
+        <value>red</value>
+        <value>green</value>
+        <value>blue</value>
+      </list>
+   </property>
+ </bean>
+ <bean id="date"  class="java.util.Date"/>
+ <bean id="date1"  class="java.util.Date">
+   <property name="year" value="110"/>
+   <property name="month" value="10"/>
+   <property name="date" value="20"/>
+ </bean>
+ 
+ <bean id="student"  class="com.nt.beans.Student">
+    <property name="names">
+       <list>
+         <value>raja</value>
+         <value>raja</value>
+         <value>ravi</value>
+         <value>rani</value>
+       </list>
+    </property>
+    <property name="dates">
+      <list>
+        <ref bean="date"/>
+        <ref bean="date1"/>        
+      </list>
+    </property>
+ </bean>
+ 
+ <bean id="airtel"  class="com.nt.beans.Airtel">
+     <property name="phones">
+        <set>
+          <value>999999999</value>
+          <value>888888888</value>
+          <value>777777777</value>
+        </set>
+     </property>
+ </bean>
+ 
+   <bean id="faculties"  class="com.nt.beans.Faculties">
+       <property name="facultySubjects">
+         <map>
+             <entry>
+              <key><value>raja</value></key>
+              <value>java</value>
+             </entry>
+             
+             <entry  key="jani" value=".net"/>
+             
+             <entry key="ravi">
+               <value>php</value>
+             </entry>
+               
+         </map>
+       </property>
+   </bean>
+   <bean id="store"  class="com.nt.beans.FruitStore">
+      <property name="fruitColors">
+         <props>
+            <prop key="banana">yellow,green</prop>
+            <prop key="apple">red,green</prop>
+            <prop key="grapes">balck,green</prop>
+         </props>
+      </property>
+   </bean>
+   <bean id="profile" class="com.nt.beans.PersonProfile">
+      <constructor-arg  value="1001"/>
+      <constructor-arg  value="raja"/>
+      <constructor-arg  value=""/>
+      <constructor-arg> <null/></constructor-arg>
+   </bean>
+ 
+</beans>

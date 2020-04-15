@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<publish-info>
+  <server id="Tomcat v9.0 Server at localhost" path="publish2.dat"/>
+  <server id="Oracle WebLogic Server 12c R2 (12.2.1) at localhost [wl_ntsp57]" path="publish1.dat"/>
+  <server id="Oracle WebLogic Server 12c R2 (12.2.1) at localhost [wl_springmvc]" path="publish0.dat"/>
+</publish-info>

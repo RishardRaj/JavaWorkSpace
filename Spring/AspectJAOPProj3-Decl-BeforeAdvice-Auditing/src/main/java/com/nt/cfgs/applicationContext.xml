@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+  <!--  cfg Aspect class as spring bean -->
+	<bean id="auditAspect" class="com.nt.aspect.AuditingAspect" />
+	
+   <!-- cfg target class -->
+	<bean id="approver" class="com.nt.target.LoanApprover" />
+	
+ 	<aop:config>
+	  <!-- prepre static pointcut -->
+	  	<aop:pointcut id="ptcAuditAdvice"
+			expression="execution(* com.nt.target.LoanApprover.*(..))" /> 
+			
+<!-- 	<aop:pointcut id="ptcAuditAdvice"
+			expression="execution(* com.nt.target.LoanApprover.*(..)  and args(lid,purpose)" /> 	
+ -->			
+	 <!-- make spring as Aspectj AOP Advice -->
+	 <aop:aspect  ref="auditAspect">
+		 <!-- make mehtod as around advice-->
+		 	<aop:before  method="audit" pointcut-ref="ptcAuditAdvice" /> 
+		</aop:aspect>
+		
+	</aop:config> 
+</beans>  

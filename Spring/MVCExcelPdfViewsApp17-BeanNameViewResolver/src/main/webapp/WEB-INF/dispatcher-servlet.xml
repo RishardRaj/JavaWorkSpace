@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Handler Mapping -->
+<bean id="suhm"  class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+   <property name="mappings">
+    <props>
+      <prop key="home.htm">pvc</prop>
+      <prop key="report.htm">grc</prop>
+    </props>  
+   </property>
+</bean>
+
+
+<!-- Controller -->
+ <bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+   <property name="viewName"  value="home"/>
+ </bean>
+ <bean id="pmnr" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+   <property name="paramName"  value="report"/>
+ </bean>
+ <bean id="grc" class="com.nt.controller.GenerateReportController">
+    <property name="methodNameResolver" ref="pmnr"/>
+ </bean>
+ <!-- view -->
+ <bean id="pdfView"  class="com.nt.view.MyPdfView"/>
+ <bean id="excelView"  class="com.nt.view.MyExcelView"/>
+
+ <!-- view Resolvers -->
+ <bean   class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix"  value="/WEB-INF/pages/"/>
+    <property name="suffix"  value=".jsp"/>
+ </bean>
+ <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+
+
+</beans>
