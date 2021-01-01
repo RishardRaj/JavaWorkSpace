@@ -1,0 +1,6 @@
+<configuration xmlns="http://java.sun.com/xml/ns/jax-rpc/ri/config">
+<service name="Hello" targetNamespace="http://service.hello.com/wsdl"
+typeNamespace="http://service.hello.com/types" packageName="com.nt.proxy.service">
+<interface name="com.nt.service.IHelloService" servantName="com.nt.service.HelloServiceImpl"/>
+</service>
+</configuration>

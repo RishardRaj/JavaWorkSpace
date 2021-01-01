@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Hello" targetNamespace="http://service.hello.com/wsdl" xmlns:tns="http://service.hello.com/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types/>
+  <message name="IHelloService_wish">
+    <part name="String_1" type="xsd:string"/></message>
+  <message name="IHelloService_wishResponse">
+    <part name="result" type="xsd:string"/></message>
+  <portType name="IHelloService">
+    <operation name="wish" parameterOrder="String_1">
+      <input message="tns:IHelloService_wish"/>
+      <output message="tns:IHelloService_wishResponse"/></operation></portType>
+  <binding name="IHelloServiceBinding" type="tns:IHelloService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="wish">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="encoded" namespace="http://service.hello.com/wsdl"/></input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="encoded" namespace="http://service.hello.com/wsdl"/></output></operation></binding>
+  <service name="Hello">
+    <port name="IHelloServicePort" binding="tns:IHelloServiceBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/></port></service></definitions>

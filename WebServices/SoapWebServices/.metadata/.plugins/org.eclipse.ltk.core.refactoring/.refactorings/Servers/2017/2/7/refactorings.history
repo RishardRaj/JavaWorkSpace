@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;jaxrpc-ri.xml&apos; to &apos;Servers&apos;" description="Move &apos;jaxrpc-ri.xml&apos; to &apos;Servers&apos;" destination="/Servers" element1="/JAX-RPC_SI_HelloExample_ContractLast/WebContent/WEB-INF/jaxrpc-ri.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1487422375766" updateReferences="true"/>
+</session>

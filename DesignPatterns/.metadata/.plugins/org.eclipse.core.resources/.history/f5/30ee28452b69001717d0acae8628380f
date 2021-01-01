@@ -1,0 +1,42 @@
+//StudentVO.java
+package com.nt.dao;
+
+public class StudentVO {
+	private int sid;
+	private String sname;
+	private String saddress;
+	private String email;
+
+	public int getSid() {
+		return sid;
+	}
+
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+	public String getSaddress() {
+		return saddress;
+	}
+
+	public void setSaddress(String saddress) {
+		this.saddress = saddress;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+}

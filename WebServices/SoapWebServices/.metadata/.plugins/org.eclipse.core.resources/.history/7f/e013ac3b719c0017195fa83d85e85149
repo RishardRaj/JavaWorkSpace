@@ -1,0 +1,5 @@
+package com.nt.servive;
+
+public interface IHelloService {
+
+}

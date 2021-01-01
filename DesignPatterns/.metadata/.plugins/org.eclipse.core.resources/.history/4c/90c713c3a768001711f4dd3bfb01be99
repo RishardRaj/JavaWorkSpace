@@ -1,0 +1,8 @@
+//StudentDAO.java
+package com.nt.dao;
+
+import java.sql.SQLException;
+
+public interface StudentDAO {
+public int insert(StudentBO studentBO)throws SQLException;
+}

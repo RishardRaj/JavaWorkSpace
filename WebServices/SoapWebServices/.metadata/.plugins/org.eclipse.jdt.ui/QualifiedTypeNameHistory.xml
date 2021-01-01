@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.rmi.Remote"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.IdentifierHelper"/>
+<fullyQualifiedTypeName name="com.nt.proxy.Hello"/>
+<fullyQualifiedTypeName name="com.nt.proxy.IHelloService"/>
+<fullyQualifiedTypeName name="com.sun.xml.rpc.client.ServiceExceptionImpl"/>
+<fullyQualifiedTypeName name="com.nt.proxy.GlobalWeather"/>
+<fullyQualifiedTypeName name="com.nt.proxy.GlobalWeather_Impl"/>
+<fullyQualifiedTypeName name="com.nt.proxy.GlobalWeatherSoap"/>
+<fullyQualifiedTypeName name="com.sun.xml.ws.security.impl.policyconv.RequiredElementsProcessor"/>
+<fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="com.nt.service.HelloServiceImplService"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.nt.service.HelloServiceImpl"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,20 @@
+package com.nt.controller;
+
+import com.nt.dao.StudentBO;
+import com.nt.dao.StudentDAO;
+import com.nt.dao.StudentDAOImpl;
+import com.nt.dao.StudentVO;
+
+public class StudentController {
+	public String registerStudent(StudentVO studentVO) {
+		StudentBO studentBO = null;
+
+		StudentDAO studentDAO = null;
+		int count = 0;
+		studentBO = new StudentBO();
+		studentBO.setSid(studentVO.getSid());
+
+		studentDAO = new StudentDAOImpl();
+		studentDAO.insert(studentBO);
+	}
+}

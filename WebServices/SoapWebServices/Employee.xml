@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employee PUBLIC "-//rajasekhar's own dtd" "Employee.dtd">
+<Employee>
+	<empno>32323</empno>
+	<empname>raja</empname>
+	<empsal>23224.32</empsal>
+</Employee>

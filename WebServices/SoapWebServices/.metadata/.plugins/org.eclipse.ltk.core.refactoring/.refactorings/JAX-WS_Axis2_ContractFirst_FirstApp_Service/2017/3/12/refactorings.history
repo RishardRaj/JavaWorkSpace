@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Hello.wsdl&apos; to &apos;JAX-WS_Axis2_ContractFirst_FirstApp_Service1/src&apos;&#x0D;&#x0A;- Original project: &apos;JAX-WS_Axis2_ContractFirst_FirstApp_Service&apos;&#x0D;&#x0A;- Destination element: &apos;JAX-WS_Axis2_ContractFirst_FirstApp_Service1/src&apos;&#x0D;&#x0A;- Original element: &apos;Hello.wsdl&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=JAX-WS_Axis2_ContractFirst_FirstApp_Service1/src" element1="src/Hello.wsdl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1490195140952" units="0" version="1.0"/>
+</session>

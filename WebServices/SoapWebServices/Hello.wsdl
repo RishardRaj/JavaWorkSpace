@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.nareshit.com"
+	xmlns:impl="http://service.nareshit.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap">
+	<wsdl:types>
+		<schema elementFormDefault="qualified" targetNamespace="http://service.nareshit.com"
+			xmlns="http://www.w3.org/2001/XMLSchema">
+						<element name="name" type="xsd:string" />
+						<element name="sayHelloReturn" type="xsd:string" />
+		</schema>
+	</wsdl:types>
+	<wsdl:message name="IHelloService_Register_Request">
+		<wsdl:part element="impl:name" name="ParameterName" />
+	</wsdl:message>
+	<wsdl:message name="IHelloService_Register_Response">
+		<wsdl:part element="impl:sayHelloReturn" name="OperationName" />
+	</wsdl:message>
+	<wsdl:portType name="IHelloService">
+		<wsdl:operation name="sayHello">
+			<wsdl:input message="impl:IHelloService_Register_Request"
+				name="portTypeParameterName" />
+			<wsdl:output message="impl:IHelloService_Register_Response"
+				name="portTypeOperation" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="HelloServiceImplBinding" type="impl:IHelloService">
+		<wsdlsoap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http/" />
+		<wsdl:operation name="sayHello">
+			<wsdlsoap:operation soapAction="" />
+			<wsdl:input name="IHelloService_Register_Request">
+				<wsdlsoap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="IHelloService_Register_Response">
+				<wsdlsoap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="IHelloServiceImplService">
+		<wsdl:port binding="impl:HelloServiceImplBinding" name="serviceHello">
+			<wsdlsoap:address
+				location="http://localhost:4343/JAX-WS_Axis2_ContractFirst_FirstApp_Service/hello" url="" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

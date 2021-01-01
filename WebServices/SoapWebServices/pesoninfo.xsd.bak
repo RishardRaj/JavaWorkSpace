@@ -1,0 +1,18 @@
+<schema targetNamespace="http://personsinfo.com"
+xmlns:p="http://personsinfo.com"
+xmlns="http://www.w3.org/2001/XmlSchema"
+elementFormDefault="qualified">
+<complexType name="personType">
+<sequence>
+<element name="name" type="string"/>
+<element name="email" type ="string"/>
+</sequence>
+</complexType>
+<element name="persons">
+<complexType>
+<sequence>
+<element name="student" type="p:personType" minOccurs="0" maxOccurs="unbounded"/>
+<element name="customer" type="p:personType" minOccurs="0" maxOccurs="unbounded"/>
+</complexType>
+</element>
+</schema>

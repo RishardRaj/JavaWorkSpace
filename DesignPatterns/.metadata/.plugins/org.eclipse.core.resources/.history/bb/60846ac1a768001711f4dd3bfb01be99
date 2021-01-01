@@ -1,0 +1,7 @@
+package com.nt.controller;
+
+public class StudentController {
+public String registerStudent(StudentVO studentVO){
+	
+}
+}

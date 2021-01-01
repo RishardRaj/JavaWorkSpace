@@ -1,0 +1,7 @@
+<configuration xmlns="http://java.sun.com/xml/ns/jax-rpc/ri/config">
+	<wsdl
+		location="http://localhost:4343/JAX-RPC_SI_HelloExample_ContractLast/hello?WSDL"
+		packageName="com.nt.proxy" />			
+</configuration>
+
+	

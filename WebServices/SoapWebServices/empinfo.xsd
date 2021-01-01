@@ -1,0 +1,16 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:p="http://empinfo.com" targetNamespace="http://empinfo.com" elementFormDefault="qualified">
+	<complexType name="personType">
+		<sequence>
+			<element name="name" type="string"/>
+			<element name="email" type="string"/>
+		</sequence>
+	</complexType>
+	<element name="persons">
+		<complexType>
+			<sequence>
+				<element name="student" type="p:personType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="customer" type="p:personType" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

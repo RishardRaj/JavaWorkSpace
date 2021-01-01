@@ -1,0 +1,50 @@
+//StudentDAOImpl.java
+package com.nt.dao;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+public class StudentDAOImpl implements StudentDAO {
+	private static Logger logger = Logger.getLogger("d://practices/Design Patterns/DAOStandardApp/logger_student.txt");
+
+	private static Properties properties = null;
+	static {
+		FileInputStream fileInputStream = null;
+		// Get Connection Object
+		try {
+			fileInputStream = new FileInputStream(
+					new File("d://practices/Design Patterns/DAOStanadardApp/jdbc.properties"));
+		} catch (FileNotFoundException fileNotFoundException) {
+			// TODO Auto-generated catch block
+			logger.info("StudentDAOImpl:staic:"+fileNotFoundException);
+			fileNotFoundException.printStackTrace();
+		}
+		properties = new Properties();
+		try {
+			properties.load(fileInputStream);
+		} catch (IOException ioException) {
+			// TODO Auto-generated catch block
+			logger.info("StudentDAOImpl:static:"+ioException);
+			ioException.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(StudentBO studentBO) throws SQLException {
+		// TODO Auto-generated method stub
+		Connection connection = null;
+		// Get Connection Object From ConnectionFactory
+		connection = ConnectionFactory.createConnection(properties.getProperty("jdbc.url"),
+				properties.getProperty("jdbc.user"), properties.getProperty("jdbc.password"));
+		logger.info("StudentDAOImpl:insert(-):Connection Object gets Created");
+		
+		return 0;
+	}
+
+}

@@ -1,0 +1,9 @@
+<webServices xmlns="http://java.sun.com/xml/ns/jax-rpc/ri/dd"
+	version="1.0" targetNamespaceBase="http://service.jaxrpcexample.com/wsdl"
+	typeNamespaceBase="http://service.jaxrpcexample.com/types"
+	urlPatternBase="/ws">
+	<endpoint name="Hello" displayName="WishService" description="Wishes User"
+		wsdl="/WEB-INF/Hello.wsdl" interface="com.nt.service.IHelloService"
+		implementation="com.nt.service.HelloServiceImpl" model="/WEB-INF/model-rpc-enc.xml.gz" />
+	<endpointMapping endpointName="Hello" urlPattern="/hello" />
+</webServices>

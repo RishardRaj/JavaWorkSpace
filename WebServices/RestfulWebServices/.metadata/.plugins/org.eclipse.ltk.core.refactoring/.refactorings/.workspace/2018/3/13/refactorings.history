@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Jersey1.xServiceAppFailed&apos;" deleteContents="true" description="Delete resource &apos;Jersey1.xServiceAppFailed&apos;" element1="/Jersey1.xServiceAppFailed" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1522497596010"/>
+</session>

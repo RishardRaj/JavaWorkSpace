@@ -1,0 +1,23 @@
+//JSONTest.java
+package com.nt.test;
+
+import com.nt.beans.Student;
+import com.nt.util.JSONUtil;
+
+public class JSONTest {
+
+	public static void main(String[] args) {
+		String jsonString = null;
+		// TODO Auto-generated method stub
+		Student student = null;
+		student = new Student();
+		student.setId(1213);
+		student.setAddress("hyderabad");
+		student.setName("Raj");
+		jsonString = JSONUtil.convertJavaToJson(student);
+		System.out.println(jsonString);
+		student = JSONUtil.convertJsonToJava(jsonString, Student.class);
+		System.out.println(student);
+	}
+
+}

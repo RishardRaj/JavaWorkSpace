@@ -1,0 +1,7 @@
+package com.nt.servive;
+
+import java.rmi.RemoteException;
+
+public interface IHelloService {
+public String sayHelloService(String name) throws RemoteException;
+}

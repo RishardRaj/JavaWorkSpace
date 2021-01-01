@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons xmlns="http://empinfo.com"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://empinfo.com D:\Practices\Frameworks\WebServices\SoapWebServices\empinfo.xsd">
+<student>
+<name>Rajasekhar</name>
+<email>rajasekharcst@gmail.com</email>
+</student>
+<customer>
+<name>Raviteja</name>
+<email>tejasano@live.com</email>
+</customer>
+</persons>

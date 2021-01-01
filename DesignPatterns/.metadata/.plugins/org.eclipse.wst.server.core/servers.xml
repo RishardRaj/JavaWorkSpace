@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="ICCBatsManApp-BD-SL-SF::org.eclipse.jst.jee.server:ICCBatsManApp-BD-SL-SF::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="1" hostname="localhost" id="Oracle WebLogic Server 12c R2 (12.2.1) at localhost [base_domain]" name="Oracle WebLogic Server 12c R2 (12.2.1) at localhost [base_domain]" runtime-id="Oracle WebLogic Server 12c R2 (12.2.1) (2)" server-type="com.bea.weblogic1221.server" server-type-id="com.bea.weblogic1221.server" start-timeout="480" stop-timeout="240" timestamp="0" weblogic_domain_path="D:\Installations\Servers\WebLogic12c\user_projects\domains\base_domain" weblogic_host_name="localhost" weblogic_is_remote="false" weblogic_port="7001" weblogic_use_bootprop="true" weblogic_use_config_xml="true"/>
+</servers>

@@ -1,0 +1,11 @@
+package com.nt.servive;
+
+public class HelloServiveImpl implements IHelloService {
+
+	@Override
+	public String sayHelloService(String name) {
+		// TODO Auto-generated method stub
+		return "Hello "+name+ "Welcome to JAX-WS_Metro Impl";
+	}
+
+}

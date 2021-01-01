@@ -1,0 +1,14 @@
+127.0.0.1 - - [14/Jun/2017:18:42:42 +0530] "GET / HTTP/1.1" 404 1000
+127.0.0.1 - - [14/Jun/2017:18:42:44 +0530] "GET /ICCBatsManApp-BD-SL-SF/ HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:43:27 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 448
+127.0.0.1 - - [14/Jun/2017:18:43:39 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:46:34 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 202
+127.0.0.1 - - [14/Jun/2017:18:46:37 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:46:46 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 433
+127.0.0.1 - - [14/Jun/2017:18:46:57 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:47:08 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 202
+127.0.0.1 - - [14/Jun/2017:18:47:12 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:47:21 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 202
+127.0.0.1 - - [14/Jun/2017:18:47:25 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290
+127.0.0.1 - - [14/Jun/2017:18:47:34 +0530] "POST /ICCBatsManApp-BD-SL-SF/controller HTTP/1.1" 200 202
+127.0.0.1 - - [14/Jun/2017:18:47:38 +0530] "GET /ICCBatsManApp-BD-SL-SF/get_batsman_details.jsp HTTP/1.1" 200 290

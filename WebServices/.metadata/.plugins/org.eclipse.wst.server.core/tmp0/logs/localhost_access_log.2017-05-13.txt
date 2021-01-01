@@ -1,0 +1,10 @@
+127.0.0.1 - - [13/May/2017:17:41:10 +0530] "GET / HTTP/1.1" 404 1000
+127.0.0.1 - - [13/May/2017:17:41:14 +0530] "GET /Jersey1.xBasicsApps/ HTTP/1.1" 404 -
+127.0.0.1 - - [13/May/2017:17:42:35 +0530] "POST /Jersey1.xBasicsApps/products/getProducts HTTP/1.1" 200 45
+127.0.0.1 - - [13/May/2017:17:46:51 +0530] "POST /Jersey1.xBasicsApps/products/getProducts HTTP/1.1" 405 -
+127.0.0.1 - - [13/May/2017:17:47:24 +0530] "POST /Jersey1.xBasicsApps/products/getProducts HTTP/1.1" 200 45
+127.0.0.1 - - [13/May/2017:18:14:15 +0530] "GET / HTTP/1.1" 404 1000
+127.0.0.1 - - [13/May/2017:18:14:18 +0530] "GET /Jersey1.xBasicsApps/ HTTP/1.1" 404 -
+127.0.0.1 - - [13/May/2017:18:15:34 +0530] "POST /Jersey1.xBasicsApps/product/getProducts HTTP/1.1" 404 -
+127.0.0.1 - - [13/May/2017:18:15:58 +0530] "GET /Jersey1.xBasicsApps/ HTTP/1.1" 404 -
+127.0.0.1 - - [13/May/2017:18:16:35 +0530] "POST /Jersey1.xBasicsApps/products/getProducts HTTP/1.1" 200 45

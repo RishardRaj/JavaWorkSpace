@@ -1,0 +1,9 @@
+//IHelloService.java
+package com.nt.service;
+
+import javax.jws.WebService;
+
+@WebService
+public interface IHelloService {
+	public String sayHelloService(String name);
+}

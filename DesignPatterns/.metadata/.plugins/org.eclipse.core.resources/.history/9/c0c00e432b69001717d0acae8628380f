@@ -1,0 +1,23 @@
+//ClientApp.java
+package com.nt.controller;
+
+import com.nt.dao.StudentVO;
+
+public class ClientApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentVO studentVO = null;
+		String result=null;
+		StudentController studentController = null;
+		studentVO = new StudentVO();
+		studentVO.setSid(324242);
+		studentVO.setSname("RAJASekhar");
+		studentVO.setSaddress("Hyderabad");
+		studentVO.setEmail("raj1234raaz@gmail.com");
+		studentController=new StudentController();
+		result=studentController.registerStudent(studentVO);
+		System.out.println(result);
+	}
+
+}

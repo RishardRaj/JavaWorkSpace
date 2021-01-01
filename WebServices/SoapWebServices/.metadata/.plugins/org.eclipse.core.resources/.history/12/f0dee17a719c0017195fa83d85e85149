@@ -1,0 +1,16 @@
+package com.nt.servive;
+
+import java.rmi.RemoteException;
+
+import javax.jws.WebService;
+
+@WebService
+public class 
+HelloServiveImpl implements IHelloService {
+
+	@Override
+	public String sayHelloService(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return return "Hello " + name + "Welcome to JAX-WS_Metro Impl";;
+	}//method
+}// class

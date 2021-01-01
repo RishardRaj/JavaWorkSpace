@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Employee[
+<!ELEMENT Employee (empno,empname,empsal)>
+<!ELEMENT empno (#PCDATA)>
+<!ELEMENT empname (#PCDATA)>
+<!ELEMENT empsal (#PCDATA)>
+]>
+<Employee>
+<empno>210</empno>
+<empname>raja</empname>
+<empsal>34432.43</empsal>
+</Employee>
