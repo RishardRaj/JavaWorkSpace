@@ -1,0 +1,24 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 07-02-2017 12:13:32
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   ExceptionInitalizerErrorDemo.java
+
+package com.nt.exception;
+
+import java.io.PrintStream;
+
+public class ExceptionInitalizerErrorDemo
+{
+
+    public ExceptionInitalizerErrorDemo()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        System.out.println(x);
+    }
+
+    static int x = 10 / 0;
+
+}

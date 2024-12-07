@@ -1,0 +1,2 @@
+FileNotFoundException is FullyCheckedException or not
+Without chance of raising FullyCheckedException  there is no chance of writing catch block

@@ -1,0 +1,4 @@
+d100
+true
+c
+Hai I am Using PrintWriterThe most enhanced writer is for character data is PrintWriter and for reading BufferedReader is best choice

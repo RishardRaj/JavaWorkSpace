@@ -1,0 +1,28 @@
+//ThreadDemo.java
+package com.nt.multithreading;
+
+class MyThread extends Thread {
+	static Thread childThread=Thread.currentThread();
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			childThread.join();
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		for (int i = 0; i <= 10; i++) {
+			System.out.println("Child Thread");
+
+		}
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

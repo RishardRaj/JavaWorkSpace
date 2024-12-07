@@ -1,0 +1,25 @@
+//FileReading.java
+package com.nt.files;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReading {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		String fileLocation = "C:\\Users\\RajaSekhar\\Desktop\\Tech\\Profile\\RajaSekhar_BTech_2016_Fresher.txt";
+		try {
+			FileReader fileReader = new FileReader(fileLocation);
+			int ch = fileReader.read();
+			while (ch != -1)
+				System.out.print((char) ch);
+			ch = fileReader.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

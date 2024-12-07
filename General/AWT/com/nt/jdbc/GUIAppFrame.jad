@@ -1,0 +1,165 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 08-08-2017 10:46:21
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   GUIAppFrame.java
+
+package com.nt.jdbc;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.*;
+import java.io.PrintStream;
+import java.sql.*;
+import javax.swing.*;
+
+public class GUIAppFrame extends JFrame
+    implements ActionListener, WindowListener
+{
+
+    public GUIAppFrame()
+    {
+        System.out.println("constructor");
+        setTitle("GUI App");
+        setSize(200, 200);
+        setBackground(Color.CYAN);
+        setLayout(new FlowLayout());
+        lno = new JLabel("student number::");
+        add(lno);
+        tno = new JTextField(10);
+        add(tno);
+        lname = new JLabel("student name::");
+        add(lname);
+        tname = new JTextField(10);
+        add(tname);
+        laddrs = new JLabel("student address::");
+        add(laddrs);
+        taddrs = new JTextField(10);
+        add(taddrs);
+        btn = new JButton("Register");
+        add(btn);
+        btn.addActionListener(this);
+        lresult = new JLabel("");
+        lresult.setForeground(Color.RED);
+        add(lresult);
+        setVisible(true);
+        makeConnection();
+        setDefaultCloseOperation(3);
+        addWindowListener(this);
+    }
+
+    private void makeConnection()
+    {
+        System.out.println("makeConnection()");
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "manager");
+            ps = con.prepareStatement("INSERT INTO STUDENT VALUES(?,?,?)");
+        }
+        catch(SQLException sqlexception)
+        {
+            sqlexception.printStackTrace();
+        }
+        catch(Exception exception)
+        {
+            exception.printStackTrace();
+        }
+    }
+
+    public void actionPerformed(ActionEvent actionevent)
+    {
+        System.out.println("actionPerformed(-)");
+        boolean flag = false;
+        Object obj = null;
+        Object obj1 = null;
+        boolean flag1 = false;
+        try
+        {
+            int i = Integer.parseInt(tno.getText());
+            String s = tname.getText();
+            String s1 = taddrs.getText();
+            ps.setInt(1, i);
+            ps.setString(2, s);
+            ps.setString(3, s1);
+            int j = ps.executeUpdate();
+            if(j == 1)
+                lresult.setText("Registration successful");
+            else
+                lresult.setText("Registration Failed");
+        }
+        catch(SQLException sqlexception)
+        {
+            lresult.setText("Registration Failed");
+        }
+        catch(Exception exception)
+        {
+            lresult.setText("Registration Failed");
+            exception.printStackTrace();
+        }
+    }
+
+    public static void main(String args[])
+    {
+        System.out.println("main(-)");
+        new GUIAppFrame();
+    }
+
+    public void windowOpened(WindowEvent windowevent)
+    {
+    }
+
+    public void windowClosing(WindowEvent windowevent)
+    {
+        System.out.println("windowClosing(-)");
+        try
+        {
+            if(ps != null)
+                ps.close();
+        }
+        catch(SQLException sqlexception)
+        {
+            sqlexception.printStackTrace();
+        }
+        try
+        {
+            if(con != null)
+                con.close();
+        }
+        catch(SQLException sqlexception1)
+        {
+            sqlexception1.printStackTrace();
+        }
+    }
+
+    public void windowClosed(WindowEvent windowevent)
+    {
+    }
+
+    public void windowIconified(WindowEvent windowevent)
+    {
+    }
+
+    public void windowDeiconified(WindowEvent windowevent)
+    {
+    }
+
+    public void windowActivated(WindowEvent windowevent)
+    {
+    }
+
+    public void windowDeactivated(WindowEvent windowevent)
+    {
+    }
+
+    private static final String STUDENT_INSERT_QUERY = "INSERT INTO STUDENT VALUES(?,?,?)";
+    private JLabel lno;
+    private JLabel lname;
+    private JLabel laddrs;
+    private JLabel lresult;
+    private JTextField tno;
+    private JTextField tname;
+    private JTextField taddrs;
+    private JButton btn;
+    Connection con;
+    PreparedStatement ps;
+}

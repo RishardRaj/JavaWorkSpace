@@ -1,0 +1,42 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 07-02-2017 12:55:48
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   ThreadDemo.java
+
+package com.nt.multithreading;
+
+import java.io.PrintStream;
+
+class MyThread extends Thread
+{
+
+    MyThread()
+    {
+    }
+
+    public void run()
+    {
+        try
+        {
+            childThread.join();
+        }
+        catch(InterruptedException interruptedexception)
+        {
+            interruptedexception.printStackTrace();
+        }
+        for(int i = 0; i <= 10; i++)
+            System.out.println("Child Thread");
+
+        try
+        {
+            Thread.sleep(10000L);
+        }
+        catch(InterruptedException interruptedexception1)
+        {
+            interruptedexception1.printStackTrace();
+        }
+    }
+
+    static Thread childThread = Thread.currentThread();
+
+}

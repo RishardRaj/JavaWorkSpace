@@ -1,0 +1,19 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 20-06-2017 20:32:15
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   ArrayListDemo.java
+
+import java.io.PrintStream;
+
+class ArrayListUtil
+{
+
+    ArrayListUtil()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        System.out.println("Hello World!");
+    }
+}

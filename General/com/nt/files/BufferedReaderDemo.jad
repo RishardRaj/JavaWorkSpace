@@ -1,0 +1,38 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 08-02-2017 16:17:51
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   BufferedReaderDemo.java
+
+package com.nt.files;
+
+import java.io.*;
+
+public class BufferedReaderDemo
+{
+
+    public BufferedReaderDemo()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        String s = "E:\\Received\\Others\\Raviteja\\SCJP Durgasoft.pdf";
+        try
+        {
+            FileReader filereader = new FileReader(s);
+            BufferedReader bufferedreader = new BufferedReader(filereader, 5466);
+            for(String s1 = bufferedreader.readLine(); s1 != null; s1 = bufferedreader.readLine())
+                System.out.print(s1);
+
+            bufferedreader.close();
+        }
+        catch(FileNotFoundException filenotfoundexception)
+        {
+            filenotfoundexception.printStackTrace();
+        }
+        catch(IOException ioexception)
+        {
+            ioexception.printStackTrace();
+        }
+    }
+}
